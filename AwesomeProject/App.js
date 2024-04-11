@@ -7,7 +7,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <MapView style={styles.map} />
-      <Text>SB MTY</Text>
     </View>
   );
 }
