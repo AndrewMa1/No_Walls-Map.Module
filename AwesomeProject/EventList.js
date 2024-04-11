@@ -1,6 +1,27 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
+const event = {
+  creator: { name: "马" },
+  name: "学习",
+  photo: require("./test.jpeg"), 
+  eventType: "学习",
+  filterType: "室内",
+  description: "手冲！",
+  location: { address: "图书馆" },
+  time: { 
+    date: "2024-04-20", 
+    start: "10:00", 
+    end: "13:00",
+    description: "看大蒙抖音。" 
+  },
+  participantLimit: 10,
+  contactInfo: "111",
+  isAutoMatching: false,
+  isApplicationRequired: true,
+};
+
+
 const Event = ({ event }) => {
   return (
     <View style={styles.container}>
