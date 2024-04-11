@@ -1,29 +1,21 @@
 import React from 'react';
-import { Text } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView } from 'react-native';
+import EventList from 'EventList';
+import MapScreen from 'MapScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <MapView style={styles.map}>
-        <Marker
-          coordinate={{ latitude: 39.9042, longitude: 116.4074 }}
-          title={"Marker Title"}
-          description={"This is a marker description."}
-        />
-      </MapView>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Map" component={MapScreen} />
+        <Stack.Screen name="EventList" component={EventList} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  map: {
-    width: '100%',
-    height: '100%',
-  },
-});
+export default App;

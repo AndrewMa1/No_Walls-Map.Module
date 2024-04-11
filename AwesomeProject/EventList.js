@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, Image, StyleSheet } from 'react-native';
 
 const event = {
   creator: { name: "马" },
@@ -21,10 +21,9 @@ const event = {
   isApplicationRequired: true,
 };
 
-
-const Event = ({ event }) => {
+const Event = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image source={event.photo} style={styles.photo} />
       <View style={styles.details}>
         <View style={styles.header}>
@@ -42,7 +41,7 @@ const Event = ({ event }) => {
         <View style={styles.descriptionContainer}>
           <Text style={styles.description}>{event.description}</Text>
         </View>
-    </View>
+    </ScrollView>
   );
 };
 
