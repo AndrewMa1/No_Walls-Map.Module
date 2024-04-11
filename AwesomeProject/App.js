@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import EventList from 'EventList';
-import MapScreen from 'MapScreen';
+import EventList from './EventList.js';
+import MapScreen from './MapScreen.js';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
